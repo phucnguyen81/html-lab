@@ -10,14 +10,16 @@ const LIVERELOAD_PORT = process.env.LIVERELOAD_PORT || 35729;
 const app = express();
 
 // Monkey patch every served HTML so they know of server changes to reload
-app.use(connectLivereload({
-    port: LIVERELOAD_PORT
-}));
+app.use(
+    connectLivereload({
+        port: LIVERELOAD_PORT,
+    })
+);
 
 // Opens livereload high port, ping browser on Express boot, once browser
 // has reconnected and handshaken
 const liveReloadServer = livereload.createServer({
-    port: LIVERELOAD_PORT
+    port: LIVERELOAD_PORT,
 });
 
 liveReloadServer.server.once("connection", () => {
