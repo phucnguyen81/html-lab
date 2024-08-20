@@ -28,7 +28,7 @@ liveReloadServer.server.once("connection", () => {
 });
 
 // Middleware to serve static files
-app.use(express.static("."));
+app.use(express.static("src"));
 
 // Process each request to return a response
 app.get("*", (req, res) => {
