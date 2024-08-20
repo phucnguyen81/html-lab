@@ -1,4 +1,6 @@
-# The System Design Primer
+# HTML Lab
+
+Learn HTML, CSS, and JavaScript.
 
 ## Setup
 
@@ -6,5 +8,4 @@
 - Install node.js: `nvm install $(< .node-version)`
 - Install direnv
 - Copy `default.env` to `.env` and fill in custom values
-- Start server without reload: `npm start`
-- Start server with reload: `nodemon npm start`
+- Start server with reload: `./server.sh`
